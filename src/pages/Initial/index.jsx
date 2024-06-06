@@ -15,14 +15,16 @@ function Initial() {
 					<div className='ip-buttons'>
 						<Link to='/login'>
 							<button className='ip-login'>Log in</button>
-                        </Link>
-                        <Link to='/register'>
-                            <button className='ip-signin'>Sign in</button>
-                        </Link>
+						</Link>
+						<Link to='/register'>
+							<button className='ip-signin'>Sign in</button>
+						</Link>
 					</div>
-					<div className='ip-guest'>
-						<button className='ip-guest-button'>Continue as a guest</button>
-					</div>
+					<Link to='/stats'>
+						<div className='ip-guest'>
+							<button className='ip-guest-button'>Continue as a guest</button>
+						</div>
+					</Link>
 				</div>
 			</div>
 		</div>

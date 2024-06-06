@@ -13,33 +13,22 @@ function Login() {
 	return (
 		<div>
 			<div className='login-background'>
-                <div className='login-container'>
-                    <div className="login-title">
-                        					<h1>LOG IN</h1>
-                    </div>
-                    <div className="login-form">
-                        <form onSubmit={handleSubmit}>
-                            <input
-                                type='email'
-                                placeholder='Email'
-                                value={email}
-                                onChange={event => setEmail(event.target.value)}
-                            />
-                            <input
-                                type='password'
-                                placeholder='Password'
-                                value={password}
-                                onChange={event => setPassword(event.target.value)}
-                            />
-                            <button type='submit'>Log in</button>
-                        </form>
-                    </div>
-                    <div className="login-buttons">
-                        <Link to="/register">Sign Up</Link>
-                        <Link to="/recovery">Forgot Password?</Link>
-
-                    </div>
-
+				<div className='login-container'>
+					<div className='login-title'>
+						<h1>LOG IN</h1>
+					</div>
+					<div className='login-form'>
+						<form onSubmit={handleSubmit}>
+							<input type='email' placeholder='Email' value={email} onChange={event => setEmail(event.target.value)} />
+							<input type='password' placeholder='Password' value={password} onChange={event => setPassword(event.target.value)} />
+							<button type='submit'>Log in</button>
+						</form>
+					</div>
+					<div className='login-buttons'>
+						<Link to='/register'>Sign Up</Link>
+						<Link to='/recovery'>Forgot Password?</Link>
+						<Link to='/stats'>Continua as a Guest</Link>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import "./index.css";
 
 function SignUp() {
 	const [email, setEmail] = useState('');
@@ -27,12 +28,15 @@ function SignUp() {
 							<input type='email' placeholder='Email' value={email} onChange={event => setEmail(event.target.value)} />
 							<input type='password' placeholder='Password' value={password} onChange={event => setPassword(event.target.value)} />
 							<input type='password' placeholder='Repeat Password' value={repeatPassword} onChange={event => setRepeatPassword(event.target.value)} />
-							<button type='submit'>Sign Up</button>
+							<Link to='/created'>
+								<button type='submit'>Sign Up</button>
+							</Link>
 						</form>
 					</div>
 					<div className='signup-buttons'>
-                        <Link to='/login'>Log In</Link>
+						<Link to='/login'>Log In</Link>
 						<Link to='/recovery'>Forgot Password?</Link>
+						<Link to='/stats'>Continua as a Guest</Link>
 					</div>
 				</div>
 			</div>

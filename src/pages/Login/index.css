@@ -1,0 +1,89 @@
+.login-background {
+	background-color: #61654c;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.login-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 400px;
+	width: 400px;
+
+}
+
+.login-title {
+	font-size: 14px;
+	font-family: 'SF Pro Rounded Bold', sans-serif;
+	padding-bottom: 2rem;
+	color: #fffffb;
+}
+
+.login-form {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	width: 400px;
+	height:200px;
+}
+
+.login-input {
+	width: 100%;
+	height: 40px;
+	border: 1px solid #fffffb;
+	border-radius: 8px;
+	box-sizing: border-box;
+	color: #000000;
+	font-size: 14px;
+	font-family: 'SF Pro Rounded Light', sans-serif;
+	font-weight: 100;
+	padding-left: 1rem;
+	outline: none;
+}
+
+.login-form-container {
+	border-top: 1px solid #fffffb;
+	border-bottom: 1px solid #fffffb;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+
+}
+
+.login-input::placeholder {
+	color: #00000061;
+	font-size: 14px;
+}
+
+.login-form-container button {
+	width: 125px;
+}
+
+.button-placement {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+
+}
+
+.login-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+    padding-top: 1.5rem;
+    width: 400px;
+
+}
+
+.login-links {
+        font-family: "SF Pro Rounded Light", sans-serif;
+        font-size: 10px;
+        text-decoration: none;
+        color: #fffffb;
+        font-weight: 100;
+}

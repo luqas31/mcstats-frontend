@@ -4,7 +4,6 @@ import './index.css';
 function Initial() {
 	return (
 		<div>
-			<body>
 				<div className='ip-background'>
 					<div className='ip-container'>
 						<div className='ip-title'>
@@ -29,7 +28,6 @@ function Initial() {
 						</Link>
 					</div>
 				</div>
-			</body>
 		</div>
 	);
 }

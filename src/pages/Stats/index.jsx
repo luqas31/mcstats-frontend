@@ -34,6 +34,7 @@ export default Stats;
 
 import { useState } from 'react';
 import Header from '../../components/Header';
+import './index.css';
 
 function Stats() {
 	const [nickname, setNickname] = useState('');
@@ -52,11 +53,11 @@ function Stats() {
 			<div className='stats-background'>
 				<div className='stats-container'>
 					<form className='stats-form' onSubmit={handleSearch}>
-						<input type='text' value={nickname} onChange={e => setNickname(e.target.value)} />
-						<button type='submit'>Search</button>
+						<input className='search-input' type='text' value={nickname} onChange={e => setNickname(e.target.value)} />
+						<button className="search-btn "type='submit'>Search</button>
 					</form>
 					<div className='stats'>
-						{skinUrl ? <img src={skinUrl} alt='Minecraft Skin' /> : <p>Loading...</p>}
+						{skinUrl ? <img className="skin" src={skinUrl} alt='Minecraft Skin' /> : <p>Loading...</p>}
 						{displayedNickname && (
 							<div className='stats-info'>
 								<h2>{displayedNickname}</h2>

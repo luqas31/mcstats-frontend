@@ -1,31 +1,35 @@
 .header-container {
 	width: 100vw;
-    height: 10vh;
-	display:grid;
-    position: fixed;
-    grid-template-columns: 1fr 1fr;
-    background-color: transparent;
+	height: 10vh;
+	display: grid;
+	position: fixed;
+	grid-template-columns: 1fr 1fr;
+	background-color: #00000028;
 }
 
 .header-logo {
-    margin-left: 10rem;
-    display: flex;
-    align-items: center;
+	margin-left: 10rem;
+	display: flex;
+	align-items: center;
 }
 
 .header-links {
-    display: flex;
-    justify-content: space-evenly;
-    margin-right: 10rem;
-    align-items: center;
+	display: flex;
+	justify-content: space-evenly;
+	margin-right: 10rem;
+	align-items: center;
 }
 
 .nav {
-    text-decoration: none;
-/*     color: #FFFFFB; */
-    font-size: 1.5rem;
-    font-weight: 500;
+	text-decoration: none;
+	color: #fffffb;
+	font-family: 'SF Pro Rounded Light', sans-serif;
+	font-size: 1rem;
+	font-weight: 200;
+        transition: 1s;
 }
 
-
-
+.nav:hover {
+    transition: 1s;
+    font-size: 0.7rem;
+}

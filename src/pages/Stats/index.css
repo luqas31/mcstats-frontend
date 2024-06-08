@@ -1,0 +1,59 @@
+.stats-background {
+	background-color: #61654c;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.stats-container {
+	display: ;
+}
+
+.stats {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+    padding-top: 3rem;
+}
+
+.skin {
+    width: 65%;
+}
+
+.stats-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    font-family: "SF Pro Rounded Light", sans-serif;
+    gap: 1rem;
+    color: #fffffb;
+}
+
+.search-input {
+	width: 80%;
+	height: 40px;
+	border: 1px solid #fffffb;
+	border-radius: 8px 0px 0px 8px;
+	box-sizing: border-box;
+	color: #000000;
+	font-size: 14px;
+	font-family: 'SF Pro Rounded Light', sans-serif;
+	font-weight: 100;
+	padding-left: 1rem;
+	outline: none;
+}
+
+.search-btn {
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  border-radius: 0px 8px 8px 0px;
+}
+
+

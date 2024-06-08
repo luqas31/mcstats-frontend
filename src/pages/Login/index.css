@@ -13,7 +13,6 @@
 	align-items: center;
 	height: 400px;
 	width: 400px;
-
 }
 
 .login-title {
@@ -28,7 +27,7 @@
 	flex-direction: column;
 	gap: 40px;
 	width: 400px;
-	height:200px;
+	height: 200px;
 }
 
 .login-input {
@@ -48,10 +47,8 @@
 .login-form-container {
 	border-top: 1px solid #fffffb;
 	border-bottom: 1px solid #fffffb;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-
-
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
 }
 
 .login-input::placeholder {
@@ -66,24 +63,22 @@
 .button-placement {
 	display: flex;
 	justify-content: center;
-    align-items: center;
-
+	align-items: center;
 }
 
 .login-buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 50px;
-    padding-top: 1.5rem;
-    width: 400px;
-
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 50px;
+	padding-top: 1.5rem;
+	width: 400px;
 }
 
 .login-links {
-        font-family: "SF Pro Rounded Light", sans-serif;
-        font-size: 10px;
-        text-decoration: none;
-        color: #fffffb;
-        font-weight: 100;
+	font-family: 'SF Pro Rounded Light', sans-serif;
+	font-size: 10px;
+	text-decoration: none;
+	color: #fffffb;
+	font-weight: 100;
 }

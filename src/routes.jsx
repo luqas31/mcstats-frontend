@@ -5,9 +5,9 @@ import Initial from './pages/Initial/index';
 import Login from './pages/Login/index';
 import SignUp from './pages/SignUp/index';
 import ResetPassword from './pages/ResetPassword/index';
-import Stats from "./pages/Stats/index";
-import CreatedAccount from "./pages/CreatedAccount/index";
-import Ranking from "./pages/Ranking/index";
+import Stats from './pages/Stats/index';
+import CreatedAccount from './pages/CreatedAccount/index';
+import Ranking from './pages/Ranking/index';
 
 export const router = createHashRouter([
 	{
@@ -41,7 +41,11 @@ export const router = createHashRouter([
 			{
 				path: 'created',
 				element: <CreatedAccount />,
-			}
+			},
+			{
+				path: '*',
+				element: <Initial />,
+			},
 		],
 	},
 ]);

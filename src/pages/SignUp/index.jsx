@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import "./index.css";
+import './index.css';
 
 function SignUp() {
 	const [email, setEmail] = useState('');
@@ -23,20 +23,28 @@ function SignUp() {
 					<div className='signup-title'>
 						<h1>SIGN UP</h1>
 					</div>
-					<div className='signup-form'>
-						<form onSubmit={handleSubmit}>
-							<input type='email' placeholder='Email' value={email} onChange={event => setEmail(event.target.value)} />
-							<input type='password' placeholder='Password' value={password} onChange={event => setPassword(event.target.value)} />
-							<input type='password' placeholder='Repeat Password' value={repeatPassword} onChange={event => setRepeatPassword(event.target.value)} />
+					<div className='signup-form-container'>
+						<form className='signup-form' onSubmit={handleSubmit}>
+							<input className='signup-input' type='email' placeholder='Email' value={email} onChange={event => setEmail(event.target.value)} />
+							<input className='signup-input' type='password' placeholder='Password' value={password} onChange={event => setPassword(event.target.value)} />
+							<input className='signup-input' type='password' placeholder='Repeat Password' value={repeatPassword} onChange={event => setRepeatPassword(event.target.value)} />
 							<Link to='/created'>
-								<button type='submit'>Sign Up</button>
+								<button className='signup-btn' type='submit'>
+									Sign Up
+								</button>
 							</Link>
 						</form>
 					</div>
 					<div className='signup-buttons'>
-						<Link to='/login'>Log In</Link>
-						<Link to='/recovery'>Forgot Password?</Link>
-						<Link to='/stats'>Continua as a Guest</Link>
+						<Link className='signup-links' to='/login'>
+							Log In
+						</Link>
+						<Link className='signup-links' to='/stats'>
+							Continua as a Guest
+						</Link>
+						<Link className='signup-links' to='/recovery'>
+							Forgot Password?
+						</Link>
 					</div>
 				</div>
 			</div>

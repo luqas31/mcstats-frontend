@@ -1,0 +1,132 @@
+.signup-background {
+    background-color: #61654c;
+    color: #fffffb;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 400px;
+}
+
+.signup-title {
+    font-size: 14px;
+    font-family: 'SF Pro Rounded Bold', sans-serif;
+    color: #fffffb;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 2rem;
+}
+
+.signup-form-container {
+    border-top: 1px solid #fffffb;
+    border-bottom: 1px solid #fffffb;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 400px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-input {
+	width: 100%;
+	height: 40px;
+	border: 1px solid #fffffb;
+	border-radius: 8px;
+	box-sizing: border-box;
+	color: #000000;
+	font-size: 14px;
+	font-family: 'SF Pro Rounded Light', sans-serif;
+	font-weight: 100;
+	padding-left: 1rem;
+	outline: none;
+}
+
+.signup-input::placeholder {
+	color: #00000061;
+	font-size: 14px;
+}
+
+
+
+.signup-btn {
+    background-color: transparent;
+    border: 1px solid #fffffb;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #fffffb;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'SF Pro Rounded Light', sans-serif;
+    font-weight: 200;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 13px 23px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s, transform 0.1s;
+    user-select: none;
+    -webkit-user-select: none;
+    width: auto;
+}
+
+.signup-btn:focus-visible {
+    box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+    transition: box-shadow 0.2s;
+}
+
+.signup-btn:active {
+    background-color: transparent;
+    border-color: #fffffb;
+    transform: scale(0.96);
+}
+
+.signup-btn:disabled {
+    border-color: #dddddd;
+    color: #dddddd;
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+.signup-btn:hover {
+    background-color: #fffffb;
+    color: #61654c;
+    transition: ease-in-out 0.5s;
+}
+
+.signup-links {
+        font-family: "SF Pro Rounded Light", sans-serif;
+        font-size: 10px;
+        text-decoration: none;
+        color: #fffffb;
+        font-weight: 100;
+}
+
+.signup-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+    padding-top: 1.5rem;
+    width: 400px;
+
+}

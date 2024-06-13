@@ -1,0 +1,190 @@
+@font-face {
+	font-family: 'SF Pro';
+	src: url('../../fonts/SF-Pro.ttf') format('ttf'), url('../../fonts/SF-Pro-Display-Regular.otf') format('otf'), url('../../fonts/SF-Pro-Rounded-Light.otf') format('otf');
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'SF Pro Rounded Light';
+	src: url('../../fonts/SF-Pro-Rounded-Light.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+    font-family: "SF Pro Rounded Bold";
+    src: url('../../fonts/SF-Pro-Rounded-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.ip-background {
+	background-color: #61654c;
+	height: 100vh;
+	color: #fffffb;
+
+}
+
+.ip-title h1 {
+	font-size: 30px;
+	font-family: 'SF Pro', sans-serif;
+    font-weight: 400;
+    padding-bottom: 1rem;
+}
+
+.ip-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	gap: 20px;
+}
+
+.ip-buttons {
+	display: flex;
+	gap: 50px;
+}
+
+.ip-login {
+	background-color: transparent;
+	border: 1px solid #fffffb;
+	border-radius: 8px;
+	box-sizing: border-box;
+	color: #fffffb;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 20px;
+	font-family: 'SF Pro Rounded Light', sans-serif;
+	font-weight: 200;
+	line-height: 20px;
+	margin: 0;
+	outline: none;
+	padding: 13px 23px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	touch-action: manipulation;
+	transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s, transform 0.1s;
+	user-select: none;
+	-webkit-user-select: none;
+	width: auto;
+}
+
+.ip-login:focus-visible {
+	box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+	transition: box-shadow 0.2s;
+}
+
+.ip-login:active {
+	background-color: transparent;
+	border-color: #fffffb;
+	transform: scale(0.96);
+}
+
+.ip-login:disabled {
+	border-color: #dddddd;
+	color: #dddddd;
+	cursor: not-allowed;
+	opacity: 1;
+}
+
+.ip-login:hover {
+	background-color: #fffffb;
+	color: #61654c;
+	transition: ease-in-out 0.5s;
+}
+
+.ip-signin {
+	background-color: #fffffb;
+	border: 1px solid #61654c;
+	border-radius: 8px;
+	box-sizing: border-box;
+	color: #61654c;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 20px;
+	font-family: 'SF Pro Rounded Light', sans-serif;
+	font-weight: 600;
+	line-height: 20px;
+	margin: 0;
+	outline: none;
+	padding: 13px 23px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	touch-action: manipulation;
+	transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s, transform 0.1s;
+	user-select: none;
+	-webkit-user-select: none;
+	width: auto;
+    font-weight: 200;
+}
+
+.ip-signin:focus-visible {
+	box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+	transition: box-shadow 0.5s;
+}
+
+.ip-signin:active {
+	background-color: #fffffb;
+	border-color: #61654c;
+	transform: scale(0.96);
+}
+
+.ip-signin:disabled {
+	border-color: #dddddd;
+	color: #dddddd;
+	cursor: not-allowed;
+	opacity: 1;
+}
+
+.ip-signin:hover {
+	background-color: #61654c;
+	color: #fffffb;
+	border-color: #fffffb;
+	transition: ease-in-out 0.5s;
+}
+
+.ip-guest {
+	background-color: transparent;
+	border: 1px solid #fffffb;
+	border-radius: 8px;
+	box-sizing: border-box;
+	color: #fffffb;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 20px;
+	font-family: 'SF Pro Rounded Light', sans-serif;
+	font-weight: 200;
+	line-height: 20px;
+	margin: 0;
+	outline: none;
+	padding: 13px 23px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	touch-action: manipulation;
+	transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s, transform 0.1s;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.ip-guest:focus-visible {
+	box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+	transition: box-shadow 0.2s;
+}
+
+.ip-guest:active {
+	background-color: transparent;
+	border-color: #fffffb;
+	transform: scale(0.96);
+}
+
+.ip-guest:disabled {
+	border-color: #dddddd;
+	color: #dddddd;
+	cursor: not-allowed;
+	opacity: 1;
+}
+
+.ip-guest:hover {
+	background-color: #fffffb;
+	color: #61654c;
+	transition: ease-in-out 0.5s;
+}

@@ -8,7 +8,7 @@ function Initial() {
 					<div className='ip-container'>
 						<div className='ip-title'>
 							<h1>
-								Choose the option the best
+								Choose the option that best
 								<br />
 								suits your needs.
 							</h1>

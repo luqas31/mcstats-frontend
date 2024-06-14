@@ -2,13 +2,23 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './index.css';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function SignUp() {
 	const [emailReg, setEmailReg] = useState('');
 	const [passwordReg, setPasswordReg] = useState('');
+	const [passwordRegRepeat, setPasswordRegRepeat] = useState('');
+
+const navigate = useNavigate();
 
 	const register = event => {
 		event.preventDefault();
+
+		if (passwordReg !== passwordRegRepeat) {
+			alert('Passwords do not match!');
+			return;
+		}
+
 		axios
 			.post('http://localhost:3333/register', {
 				email: emailReg,
@@ -16,9 +26,12 @@ function SignUp() {
 			})
 			.then(response => {
 				console.log(response);
+				navigate('/created'); 
+			})
+			.catch(error => {
+				alert('Email already in use!', error);
 			});
 	};
-
 	return (
 		<div>
 			<div className='signup-background'>
@@ -44,7 +57,14 @@ function SignUp() {
 									setPasswordReg(e.target.value);
 								}}
 							/>
-							<input className='signup-input' type='password' placeholder='Repeat Password' />
+							<input
+								className='signup-input'
+								type='password'
+								placeholder='Repeat Password'
+								onChange={e => {
+									setPasswordRegRepeat(e.target.value);
+								}}
+							/>
 							<button className='signup-btn' type='submit'>
 								Sign Up
 							</button>

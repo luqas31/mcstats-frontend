@@ -32,7 +32,8 @@ function Stats() {
 export default Stats;
  */
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import Header from '../../components/Header';
 import './index.css';
 
@@ -40,12 +41,26 @@ function Stats() {
 	const [nickname, setNickname] = useState('');
 	const [displayedNickname, setDisplayedNickname] = useState('');
 	const [skinUrl, setSkinUrl] = useState('https://mc-heads.net/body/');
+	const [playerStats, setPlayerStats] = useState({ kills: 0, deaths: 0 });
 
 	const handleSearch = event => {
 		event.preventDefault();
 		setSkinUrl(`https://mc-heads.net/body/${nickname}`);
 		setDisplayedNickname(nickname);
 	};
+
+	useEffect(() => {
+		if (displayedNickname) {
+			axios
+				.get(`http://localhost:3333/player-stats?nick=${displayedNickname}`)
+				.then(response => {
+					setPlayerStats(response.data);
+				})
+				.catch(error => {
+					console.error('Error fetching player stats:', error);
+				});
+		}
+	}, [displayedNickname]);
 
 	return (
 		<div>
@@ -54,19 +69,21 @@ function Stats() {
 				<div className='stats-container'>
 					<form className='stats-form' onSubmit={handleSearch}>
 						<input className='search-input' type='text' value={nickname} onChange={e => setNickname(e.target.value)} />
-						<button className="search-btn "type='submit'>Search</button>
+						<button className='search-btn ' type='submit'>
+							Search
+						</button>
 					</form>
 					<div className='stats'>
-						{skinUrl ? <img className="skin" src={skinUrl} alt='Minecraft Skin' /> : <p>Loading...</p>}
+						{skinUrl ? <img className='skin' src={skinUrl} alt='Minecraft Skin' /> : <p>Loading...</p>}
 						{displayedNickname && (
 							<div className='stats-info'>
 								<h2>{displayedNickname}</h2>
 								<h3>Kills</h3>
-								<p>0</p>
+								<p>{playerStats.kills}</p>
 								<h3>Deaths</h3>
-								<p>0</p>
+								<p>{playerStats.deaths}</p>
 								<h3>KD Ratio</h3>
-								<p>0</p>
+								<p>{playerStats.kills / playerStats.deaths}</p>
 							</div>
 						)}
 					</div>

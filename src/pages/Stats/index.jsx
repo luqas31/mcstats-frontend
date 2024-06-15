@@ -54,13 +54,20 @@ function Stats() {
 			axios
 				.get(`http://localhost:3333/player-stats?nick=${displayedNickname}`)
 				.then(response => {
-					setPlayerStats(response.data);
+					if (response.data && Object.keys(response.data).length > 0) {
+						setPlayerStats(response.data);
+					} else {
+						alert('Player not found on the server');
+						setPlayerStats({ kills: "0", deaths: "0" });
+					}
 				})
 				.catch(error => {
 					console.error('Error fetching player stats:', error);
 				});
 		}
 	}, [displayedNickname]);
+
+	const KDR = playerStats.deaths === 0 ? playerStats.kills : playerStats.kills / playerStats.deaths;
 
 	return (
 		<div>
@@ -83,7 +90,7 @@ function Stats() {
 								<h3>Deaths</h3>
 								<p>{playerStats.deaths}</p>
 								<h3>KD Ratio</h3>
-								<p>{playerStats.kills / playerStats.deaths}</p>
+								<p>{KDR}</p>
 							</div>
 						)}
 					</div>

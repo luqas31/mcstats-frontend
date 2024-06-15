@@ -33,9 +33,9 @@ export default Stats;
  */
 
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import Header from '../../components/Header';
 import './index.css';
+import { getPlayerStats } from '../../services/api';
 
 function Stats() {
 	const [nickname, setNickname] = useState('');
@@ -51,14 +51,13 @@ function Stats() {
 
 	useEffect(() => {
 		if (displayedNickname) {
-			axios
-				.get(`http://localhost:3333/player-stats?nick=${displayedNickname}`)
-				.then(response => {
-					if (response.data && Object.keys(response.data).length > 0) {
-						setPlayerStats(response.data);
+			getPlayerStats(displayedNickname)
+				.then(data => {
+					if (data && Object.keys(data).length > 0) {
+						setPlayerStats(data);
 					} else {
 						alert('Player not found on the server');
-						setPlayerStats({ kills: "0", deaths: "0" });
+						setPlayerStats({ kills: '0', deaths: '0' });
 					}
 				})
 				.catch(error => {

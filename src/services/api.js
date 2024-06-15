@@ -15,3 +15,13 @@ export const registerUser = (email, password) => {
 		password: password,
 	});
 };
+
+export function getPlayerStats(nickname) {
+	return axios
+		.get(`http://localhost:3333/player-stats?nick=${nickname}`)
+		.then(response => response.data)
+		.catch(error => {
+			console.error('Error fetching player stats:', error);
+			throw error;
+		});
+}

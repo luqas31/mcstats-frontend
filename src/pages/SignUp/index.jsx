@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './index.css';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { registerUser } from '../../services/api.js';
 
 function SignUp() {
 	const [emailReg, setEmailReg] = useState('');
 	const [passwordReg, setPasswordReg] = useState('');
 	const [passwordRegRepeat, setPasswordRegRepeat] = useState('');
 
-const navigate = useNavigate();
+	const navigate = useNavigate();
 
 	const register = event => {
 		event.preventDefault();
@@ -19,14 +19,10 @@ const navigate = useNavigate();
 			return;
 		}
 
-		axios
-			.post('http://localhost:3333/register', {
-				email: emailReg,
-				password: passwordReg,
-			})
+		registerUser(emailReg, passwordReg)
 			.then(response => {
 				console.log(response);
-				navigate('/created'); 
+				navigate('/created');
 			})
 			.catch(error => {
 				alert('Email already in use!', error);

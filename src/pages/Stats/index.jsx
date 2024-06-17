@@ -57,16 +57,17 @@ function Stats() {
 						setPlayerStats(data);
 					} else {
 						alert('Player not found on the server');
-						setPlayerStats({ kills: '0', deaths: '0' });
+						setPlayerStats({ kills: 0, deaths: 0 });
 					}
 				})
 				.catch(error => {
 					console.error('Error fetching player stats:', error);
+					setPlayerStats({ kills: 0, deaths: 0 });
 				});
 		}
 	}, [displayedNickname]);
 
-	const KDR = playerStats.deaths === 0 ? playerStats.kills : playerStats.kills / playerStats.deaths;
+	const KDR = playerStats.deaths === 0 ? playerStats.kills : (playerStats.kills / playerStats.deaths).toFixed(2);
 
 	return (
 		<div>

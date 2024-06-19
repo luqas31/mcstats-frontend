@@ -19,7 +19,8 @@ function Ranking() {
 	return (
 		<>
 			<Header />
-			<div className='stats-background'>
+			<div className='stats-background' id='ranking'>
+				<h1 className='ranking'>Top 3 Players</h1>
 				<div className='players'>
 					{players.map((player, index) => (
 						<div className='player-box' key={index}>

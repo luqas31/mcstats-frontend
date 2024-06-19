@@ -74,7 +74,8 @@ function Stats() {
 	return (
 		<div>
 			<Header />
-			<div className='stats-background'>
+			<div className='stats-background' id='ranking'>
+				<h1 className='ranking'>Stats</h1>
 				<div className='stats-container'>
 					<form className='stats-form' onSubmit={handleSearch}>
 						<input className='search-input' type='text' value={nickname} onChange={e => setNickname(e.target.value)} />

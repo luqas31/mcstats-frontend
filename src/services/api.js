@@ -40,3 +40,13 @@ export const userAuthenticated = () => {
 		},
 	}).then((response) => console.log(response));
 }
+
+export function getPlayerRanking() {
+	return axios
+		.get('http://localhost:3333/player-ranking')
+		.then(response => response.data)
+		.catch(error => {
+			console.error('Error fetching player ranking:', error);
+			throw error;
+		});
+}

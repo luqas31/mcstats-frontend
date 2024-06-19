@@ -1,0 +1,21 @@
+.player-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	width: 600px;
+	align-items: center;
+}
+
+.players {
+	display: flex;
+	flex-direction: column;
+	height: 50vh;
+	justify-content: space-evenly;
+	font-family: 'Roboto', sans-serif;
+	color: #fffffb;
+}
+
+.nick {
+  width: 150px;
+  text-align: center;
+}

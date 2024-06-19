@@ -67,7 +67,9 @@ function Stats() {
 		}
 	}, [displayedNickname]);
 
+
 	const KDR = playerStats.deaths === 0 ? playerStats.kills : (playerStats.kills / playerStats.deaths).toFixed(2);
+
 
 	return (
 		<div>

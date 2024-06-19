@@ -1,12 +1,19 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3333';
 
 export const loginUser = (email, password) => {
-	return axios.post(`${API_URL}/login`, {
-		email: email,
-		password: password,
-	});
+	return axios
+		.post(`http://localhost:3333/login`, {
+			email: email,
+			password: password,
+		})
+		.then(response => {
+			if (!response.data.message) {
+				return false;
+			} else {
+				return true;
+			}
+		});
 };
 
 export const registerUser = (email, password) => {
@@ -24,4 +31,12 @@ export function getPlayerStats(nickname) {
 			console.error('Error fetching player stats:', error);
 			throw error;
 		});
+}
+
+export const userAuthenticated = () => {
+	return axios.get('http://localhost:3333/auth', {
+		headers: {
+			'x-access-token': localStorage.getItem('token'),
+		},
+	}).then((response) => console.log(response));
 }

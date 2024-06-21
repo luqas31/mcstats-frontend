@@ -1,15 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './index.css';
 import { useNavigate } from 'react-router-dom';
-import { loginUser } from '../../services/api.js';
-
+import { loginUser, loggedIn } from '../../services/api.js';
 
 function Login() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
-	
+	const [loginStatus, setLoginStatus] = useState('');
 
 	const navigate = useNavigate();
 
@@ -31,6 +30,16 @@ function Login() {
 				}
 			});
 	};
+
+useEffect(() => {
+	loggedIn()
+		.then(response => { 
+			if (response.data.loggedIn == true) {
+				navigate('/stats');
+				console.log("User already Logged In")
+			}
+		}
+)}, []);
 
 	return (
 		<div>

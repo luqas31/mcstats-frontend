@@ -31,15 +31,14 @@ function Login() {
 			});
 	};
 
-useEffect(() => {
-	loggedIn()
-		.then(response => { 
+	useEffect(() => {
+		loggedIn().then(response => {
 			if (response.data.loggedIn == true) {
 				navigate('/stats');
-				console.log("User already Logged In")
+				console.log('User already Logged In');
 			}
-		}
-)}, []);
+		});
+	}, [navigate]);
 
 	return (
 		<div>

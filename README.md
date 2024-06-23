@@ -1,8 +1,8 @@
-# React + Vite
+#MCStats
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The MCStats App is an application that allows Minecraft players to easily and intuitively view their game statistics.
 
-Currently, two official plugins are available:
+This web app was created as a final project for a FullStack Web Developer course.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+API Repository(https://github.com/luqas31/mcstats-backend)
+MCServer Repository(https://github.com/luqas31/minecraft-stats-server)

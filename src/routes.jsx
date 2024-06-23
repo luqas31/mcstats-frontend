@@ -8,6 +8,7 @@ import ResetPassword from './pages/ResetPassword/index';
 import Stats from './pages/Stats/index';
 import CreatedAccount from './pages/CreatedAccount/index';
 import Ranking from './pages/Ranking/index';
+import ChooseNewPassword from './pages/ChooseNewPassword/index';
 
 export const router = createHashRouter([
 	{
@@ -41,6 +42,10 @@ export const router = createHashRouter([
 			{
 				path: 'created',
 				element: <CreatedAccount />,
+			},
+			{
+				path: 'reset-password',
+				element: <ChooseNewPassword />,
 			},
 			{
 				path: '*',
